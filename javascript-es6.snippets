@@ -44,6 +44,14 @@ snippet af
 }
 endsnippet
 
+
+snippet afe
+${1:export }${2:const ${3:name} = }(${4}) => {
+    ${0}
+}
+endsnippet
+
+
 snippet sym
 const ${1} = Symbol('${0}');
 endsnippet
@@ -54,4 +62,10 @@ endsnippet
 
 snippet ${
     ${${1}}${0}
+endsnippet
+
+snippet fe "Export function"
+${1:export }function $2($3) \{
+    $0
+\}
 endsnippet
