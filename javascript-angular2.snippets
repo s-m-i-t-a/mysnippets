@@ -33,3 +33,13 @@ export class $1 \{
 
 \}
 endsnippet
+
+
+snippet @I "Input property"
+@Input() ${1:name}: ${2:Type}${3: = ${5:undefined}};$0
+endsnippet
+
+
+snippet @Oe "Output emitter property"
+@Output() ${1:name}Change: ${2:Type} = new EventEmitter<${3:Type}>();$0
+endsnippet
