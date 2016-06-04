@@ -11,7 +11,29 @@ snippet comp "Component"
 	$9
     \`
 \})
-export class ${1/(\w+)-*/\u$1/g}${2: implements OnInit} \{
+export class ${1/(\w+)-*/\u$1/g}Component${2: implements OnInit} \{
+
+    constructor($3) \{
+	$4
+    \}
+
+    $0
+\}
+endsnippet
+
+
+snippet view "View component"
+@Component(\{
+    selector: '${1:component}-view',
+    pipes: [$5],
+    providers: [$6],
+    directives: [$7],
+    styles: [$8],
+    template: \`
+	$9
+    \`
+\})
+export class ${1/(\w+)-*/\u$1/g}ViewComponent${2: implements OnInit} \{
 
     constructor($3) \{
 	$4
