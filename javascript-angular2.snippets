@@ -65,3 +65,15 @@ endsnippet
 snippet @Oe "Output emitter property"
 @Output() ${1:name}Change: ${2:Type} = new EventEmitter<${3:Type}>();$0
 endsnippet
+
+
+snippet @RC "Router config"
+@RouteConfig([
+  \{path: '${1:/}', name: '${2:Index}', component: ${3:HomeViewComponent}${4:, useAsDefault: true}\}$0
+])
+endsnippet
+
+
+snippet route "Route definition"
+\{path: '${1:/}', name: '${2:Index}', component: ${3:HomeViewComponent}${4:, useAsDefault: true}\}$0
+endsnippet
