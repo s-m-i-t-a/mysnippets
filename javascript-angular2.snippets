@@ -7,9 +7,9 @@ snippet comp "Component"
     providers: [$6],
     directives: [$7],
     styles: [$8],
-    template: \`
-	$9
-    \`
+    template: ${9:\`
+	$10
+    \`}
 \})
 export class ${1/(\w+)-*/\u$1/g}Component${2: implements OnInit} \{
 
