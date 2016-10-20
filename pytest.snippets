@@ -5,3 +5,37 @@ snippet trace "Place pytest 'brakepoint'"
 import pytest
 pytest.set_trace()
 endsnippet
+
+
+snippet should "Create pytest should test function"
+def should_$1($2):
+    $0
+    assert ${3:0}
+endsnippet
+
+
+snippet fixture "Create pytest fixture"
+@pytest.fixture
+def $1($2):
+    $0
+    return ${3:None}
+endsnippet
+
+
+snippet yfixture "Create yield fixture"
+@pytest.fixture
+def $1($2):
+    $3
+    yield $4
+
+    ${0:# fixture finalization}
+endsnippet
+
+
+snippet ywfixture "Create yield fixture with 'with' block"
+@pytest.fixture
+def $1($2):
+    $0
+    with ${3:patch('$4')} as ${5:mock}:
+        yield $5
+endsnippet
