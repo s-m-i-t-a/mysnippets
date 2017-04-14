@@ -1,0 +1,14 @@
+priority 10
+
+
+snippet model "Mongoengine model"
+class ${1:Model}(${2:Document}):
+    ${3:field = StringField(required=True)}
+    $0
+endsnippet
+
+
+snippet field "Mongoengine field"
+${1:name} = ${2:StringField}(${3:required=True$4})
+$0
+endsnippet
