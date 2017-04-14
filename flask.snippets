@@ -1,2 +1,21 @@
 priority 10
 
+
+snippet bprint "Blueprint"
+${1:name} = Blueprint('$1', __name__)
+$0
+endsnippet
+
+
+snippet broute "Blueprint route"
+@${1:name}.route('/${2:path}', endpoint='${3:endpoint}', methods=[${4:'GET'}])
+$0
+endsnippet
+
+
+snippet brview "Blueprint view with route"
+@${1:name}.route('/${2:path}', endpoint='${3:endpoint}', methods=[${4:'GET'}])
+def $3($5):
+    return ''
+$0
+endsnippet
