@@ -1,0 +1,30 @@
+priority 10
+
+snippet @fl
+// @flow
+$0
+endsnippet
+
+
+snippet type
+${1:export }type ${2:Type} = ${3:BaseType};
+endsnippet
+
+
+snippet record
+${1:export }type ${2:Record}${3:<${4:T}>} = {
+    ${5:name}: $4${0}
+};
+endsnippet
+
+
+snippet exact
+${1:export }type ${2:Record}${3:<${4:T}>} = {|
+    ${5:name}: $4${0}
+|};
+endsnippet
+
+
+snippet imt
+import type \{ $1 \} from '$0';
+endsnippet
