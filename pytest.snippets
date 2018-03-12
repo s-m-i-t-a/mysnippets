@@ -39,3 +39,8 @@ def $1($2):
     with ${3:patch('$4')} as ${5:mock}:
         yield $5
 endsnippet
+
+
+snippet ass "Assert statement"
+assert ${1:${2:var} ${3:==} ${4:'value'}}
+endsnippet
