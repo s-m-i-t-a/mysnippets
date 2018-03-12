@@ -1,0 +1,37 @@
+priority 10
+
+snippet setup
+setup do
+$0
+end
+endsnippet
+
+
+snippet setupex
+setup do
+	on_exit fn ->
+		$0
+	end
+end
+endsnippet
+
+
+snippet setupa
+setup do
+	${1:parm = nil}
+	{:ok, ${2:parm: param}}
+end
+endsnippet
+
+
+snippet setupexa
+setup do
+	${1:parm = nil}
+
+	on_exit fn ->
+		$0
+	end
+
+	{:ok, ${2:parm: param}}
+end
+endsnippet
