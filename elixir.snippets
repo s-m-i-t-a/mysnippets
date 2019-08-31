@@ -9,29 +9,54 @@ endsnippet
 
 snippet setupex
 setup do
-	on_exit fn ->
-		$0
-	end
+  on_exit fn ->
+    $0
+  end
 end
 endsnippet
 
 
 snippet setupa
 setup do
-	${1:parm = nil}
-	{:ok, ${2:parm: param}}
+  ${1:parm = nil}
+  {:ok, ${2:parm: param}}
 end
 endsnippet
 
 
 snippet setupexa
 setup do
-	${1:parm = nil}
+  ${1:parm = nil}
 
-	on_exit fn ->
-		$0
-	end
+  on_exit fn ->
+    $0
+  end
 
-	{:ok, ${2:parm: param}}
+  {:ok, ${2:parm: param}}
 end
+endsnippet
+
+
+snippet prop
+property "${1:test}" do
+  forall ${2:val} <- ${3:generator()} do
+    false
+  end
+end
+endsnippet
+
+
+snippet useprop
+use PropCheck
+endsnippet
+
+
+snippet propstructure
+# Tests
+
+# Properties
+
+# Helpers
+
+# Generators
 endsnippet
