@@ -17,3 +17,7 @@ insert_final_newline = true
 [elixir.*]
 indent_style = space
 indent_size = 2
+
+[plantuml.*]
+indent_style = space
+indent_size = 2
