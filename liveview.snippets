@@ -1,0 +1,109 @@
+priority 10
+
+snippet lc "LiveComponent module"
+defmodule ${1:LiveViewStudio}Web.${2}Component do
+  use ${1:LiveViewStudio}Web, :live_component
+end
+endsnippet
+
+snippet assign "LiveView assign"
+socket =
+  assign(socket,
+    ${1:key}: ${2:value}
+  )
+endsnippet
+
+snippet fc "LiveView function component"
+def ${1:name}(assigns) do
+  ~H"""
+  ${2}
+  """
+end
+endsnippet
+
+snippet he "LiveView handle_event function"
+def handle_event(${1:event}, _, socket) do
+  {:noreply, socket}
+end
+endsnippet
+
+snippet he1 "LiveView handle_event function"
+def handle_event(${1:event}, _, socket) do
+  socket = assign(socket, ${2:key}: ${3:value})
+  {:noreply, socket}
+end
+endsnippet
+
+snippet he2 "LiveView handle_event function"
+def handle_event(${1:event}, _, socket) do
+  socket =
+    assign(socket,
+      ${2:key}: ${3:value}
+    )
+
+  {:noreply, socket}
+end
+endsnippet
+
+snippet hi "LiveView handle_info function"
+def handle_info(${1:message}, socket) do
+  {:noreply, socket}
+end
+endsnippet
+
+snippet hi1 "LiveView handle_info function"
+def handle_info(${1:message}, socket) do
+  socket = assign(socket, ${2:key}: ${3:value})
+  {:noreply, socket}
+end
+endsnippet
+
+snippet hi2 "LiveView handle_info function"
+def handle_info(${1:message}, socket) do
+  socket =
+    assign(socket,
+      ${2:key}: ${3:value}
+    )
+
+  {:noreply, socket}
+end
+endsnippet
+
+snippet hp "LiveView handle_params function"
+def handle_params(${1:params}, _uri, socket) do
+  {:noreply, socket}
+end
+endsnippet
+
+snippet h "LiveView HEEx template"
+~H"""
+${0}
+"""
+endsnippet
+
+snippet lv "LiveView module"
+defmodule LiveViewStudioWeb.${1}Live do
+  use LiveViewStudioWeb, :live_view
+end
+endsnippet
+
+snippet mount "LiveView mount function"
+def mount(_params, _session, socket) do
+  socket =
+    assign(socket,
+      ${1:key}: ${2:value}
+    )
+
+  {:ok, socket}
+end
+endsnippet
+
+snippet rend "LiveView render function"
+def render(assigns) do
+  ~H"""
+  ${0}
+  """
+end
+endsnippet
+
+extends elixir
