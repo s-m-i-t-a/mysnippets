@@ -1,8 +1,8 @@
 priority 10
 
 snippet lc "LiveComponent module"
-defmodule ${1:LiveViewStudio}Web.${2}Component do
-  use ${1:LiveViewStudio}Web, :live_component
+defmodule ${1:Module}Web.${2}Component do
+  use ${1:Module}Web, :live_component
 end
 endsnippet
 
@@ -82,8 +82,8 @@ ${0}
 endsnippet
 
 snippet lv "LiveView module"
-defmodule LiveViewStudioWeb.${1}Live do
-  use LiveViewStudioWeb, :live_view
+defmodule ${1:Module}Web.${2}Live do
+  use ${1:Module}Web, :live_view
 end
 endsnippet
 
